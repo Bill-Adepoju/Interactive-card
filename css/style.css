@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.purple-side{
+    background-image: url(../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 30rem;
+    
+}
+
+.wrapper{
+    position: absolute;
+    z-index :1;
+}
+
+.white-side{
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+}
+
+.card-details{
+    width: 20rem;
+    margin-left: 45rem;
+    margin-top: 12rem;
+    /* display: none; */
+    
+}
+
+.img-front{
+    height: 10rem;
+    width: 18rem;
+    position: absolute;
+    z-index: 3;
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0.5rem;
+    top: 150px;
+    left: 230px;
+}
+
+.c-icon{
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    z-index: 5;
+    top: 170px;
+    left: 250px;
+    
+}
+
+.img-back{
+    background-image: url(../images/bg-card-back.png);
+    height: 10rem;
+    width: 18rem;
+    position:absolute;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    top: 340px;
+    left: 300px;
+}
+
+.confirm, .continue{
+    background-color: hsl(278, 68%, 11%);
+    color: #ffff;
+    width: 100%;
+}
+
+.front-card-det{
+    color: #ffff;
+    margin-top: 5.5rem;
+    text-align: center;
+    justify-content: center;
+}
+.name-date{
+    margin-left: -0.5rem;
+    font-size: 0.8rem;
+}
+
+#card-number{
+    text-align: left;
+    margin: 0 1rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.2rem;
+}
+
+.numb-back{
+    color: #ffff;
+    margin: 4.1rem 0 0 14rem;
+    font-size: 0.8rem; 
+}
+
+.mon-year{
+    margin-left: 3rem;
+}
+
+.error{
+    color: red;
+    font-size: 0.6rem;
+    display: none;
+}
+
+#complete-page{
+    display: none;
+    position: absolute;
+    z-index: 4;
+    width: 20rem;
+    margin-left: 45rem; 
+    margin-top: 14.6rem;
+}
+
+.thank-you{
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px){
+    body {
+        max-width: 480px;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+
+    }
+}

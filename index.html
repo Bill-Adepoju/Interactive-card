@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Interactive Card</title>
+</head>
+<body >
+    <main class="">
+        
+        
+        <div class="wrapper row">
+
+            <div class="purple-side col-md-6">
+        
+            </div>
+
+            <div class="white-side col-md-6">
+
+                
+                <!-- <div class="padding"> -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card-details">
+
+                               
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    
+                                                    <label class="mb-1" for="name"><b> CARDHOLDER NAME</b></label>
+                                                    <input class="form-control" id="name" type="text" placeholder="e.g Jane Appleseed">
+                                                    <p class="name-error error">Wrong format, enter name only</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="mb-1" for="ccnumber"><b>CARD NUMBER</b> </label>
+                
+                
+                                                    <div class="input-group">
+                                                        <input class="form-control" maxlength="16" id="number" type="text" placeholder="e.g. 1234 5678 9123 0000">
+                                                    </div> 
+                                                    <p class="number-error error">Wrong format, numbers only</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <div class="row gx-3 mt-3">
+                                            <div class="form-group col-md-3">
+                                                <label class="mb-1" for="ccmonth"> <b>EXP.DATE(MM/YY)</b></label>
+                                                <input class="form-control" maxlength="2" id="ccmonth" type="text" placeholder="MM">
+                                                
+                                            </div>
+                                            
+                                            <div class="form-group col-sm-3">
+                                                <label  for="ccyear"><b> </b></label>
+                                                <input class="form-control mt-1" maxlength="2" id="ccyear" type="text" placeholder="YY">
+                                            </div>
+                                            <div class="col-sm-6 ml-3">
+                                                <div class="form-group">
+                                                    <label class="mb-1" for="cvc"><b> CVC </b></label>
+                                                    <input class="form-control" maxlength="3" id="cvc-in" type="text" placeholder="e.g. 000">
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6"><p class="date-error error">Wrong format, Valid date only</p><span class="blank-error error">Can't be blank</span></div>
+                                                <div class="col-md-6"><p class="cvc-error error">Number only</p> <span class="blankcvc-error error">Can't be blank</span></div>
+
+                                            </div>
+                        
+
+                                        </div>
+                                    </div>
+                            
+
+                                <div class="submit mt-3">
+                                    <button class="btn  confirm text-center" id="conf-btn" type="submit">
+                                         Confirm
+                                    </button>
+                                    <p class="submit-error error"> Please input your details</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="card-img ">
+            <div class="img-front">
+               
+                <div class="front-card-det">
+                    <p id="card-number">0000 0000 0000 0000</p>
+                    <div class="name-num row gx-4">
+                    
+                        <div class="name-date row mt-2">
+                            <div class="name col-sm-6">
+                                <p class="card-name" id="card-name">JANE APPLESEED</p>
+                            </div>
+
+                            <div class="date col-sm-6">
+                                <p class="mon-year"><span id="month">00</span>/<span id="year">00</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-back">
+                <div class="numb-back">
+                    <p id="cvv">000</p>
+                </div>
+
+            </div>
+            <div class="c-icon">
+                <img class="logo w-100" src="./images/card-logo.svg" alt="card-logo">
+            </div>
+        </div>
+    </main>
+
+    <div id="complete-page" class="text-center">
+        <div class="complete-image">
+            <img class="w-25 pb-4" src="./images/icon-complete.svg" alt="complete">
+        </div>
+        <div class="compelete-words">
+            <h1 class="thank-you"> THANK YOU!</h1>
+            <p class="thank-words">We've added your card details</p>
+        </div>
+        <div class="thank-button">
+            <button class="btn continue text-center mt-4" id="cont-btn" type="submit">
+                Continue
+           </button>
+        
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
