@@ -28,7 +28,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/sc-int1.png)
+![](./images/sc-int2.png)
+![](./images/sc-int3.png)
+![](./images/sc-int4.png)
 
 
 ### Links

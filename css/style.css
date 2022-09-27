@@ -26,7 +26,7 @@ body{
 }
 
 .white-side{
-    height: 100vh;
+    /* height: 100vh; */
     position: absolute;
     z-index: 1;
 }
@@ -127,14 +127,74 @@ body{
     font-size: 1.5rem;
 }
 
-@media only screen and (min-width : 320px) and (max-width : 480px){
+@media only screen and (min-width : 320px) and (max-width : 580px){
     body {
         max-width: 480px;
+        overflow: hidden;
     }
 
     .wrapper{
         display: flex;
         flex-direction: column;
+        position: static;
+        overflow: hidden;
 
+    }
+
+    .white-side{
+        position: static;
+        width: auto;
+        margin-bottom: 0;
+        overflow: hidden;
+        /* height: 20rem; */
+    }
+
+    .purple-side{
+        display: none;
+    }
+    .mobile-bg{
+        background-image: url(../images/bg-main-mobile.png);
+        height: 15rem;
+        background-repeat: no-repeat;
+        background-size: 480px;
+        overflow: hidden;
+    }
+
+    .card-details{
+        margin-top: 5rem;
+        margin-left: 2rem;
+        overflow: hidden;
+    }
+
+    .img-back{
+        top: 30px;
+        left: 80px;
+    }
+
+    .img-front{
+        top: 120px;
+        left: 20px;
+    }
+
+    .c-icon{
+        top: 140px;
+        left: 40px;
+    }
+
+    .name-date{
+        display: flex;
+        flex-direction: row;
+        gap: 0rem;
+        margin-left: -4.5rem;
+    }
+
+    .date{
+        margin-top: -2.2rem;
+        margin-left: 9rem;
+    }
+
+    #complete-page{
+        margin-left: 3.5rem; 
+        margin-top: 7rem;
     }
 }
